@@ -79,26 +79,26 @@ int run(File input, File output)
 		output.writeln(day.name ~ " z'Mittag:");
 		foreach (dish; lunch)
 		{
-			output.writeln(dish.tag ~ "  " ~ dish);
+			output.writeln(dish.safeTag ~ "  " ~ dish);
 		}
 
 		output.writeln();
 		foreach (dish; lunchVeggie.removeDoubles(lunch))
 		{
 
-			output.writeln("" ~ AnimalsAndNature.fourLeafClover, dish.tag ~ "  " ~ dish);
+			output.writeln("" ~ AnimalsAndNature.fourLeafClover, dish.safeTag ~ "  " ~ dish);
 		}
 
 		output.writeln("\n -------------------- \n\nZan Nochtmoi:");
 		foreach (dish; supper)
 		{
-			output.writeln(dish.tag ~ "  " ~ dish);
+			output.writeln(dish.safeTag ~ "  " ~ dish);
 		}
 
 		output.writeln();
 		foreach (dish; supperVeggie.removeDoubles(supper))
 		{
-			output.writeln("" ~ AnimalsAndNature.fourLeafClover, dish.tag ~ "  " ~ dish);
+			output.writeln("" ~ AnimalsAndNature.fourLeafClover, dish.safeTag ~ "  " ~ dish);
 		}
 
 		output.writeln("\n--------------------------------------------------\n");
@@ -108,6 +108,19 @@ int run(File input, File output)
 	output.flush();
 
 	return 0;
+}
+
+string safeTag(string dish)
+{
+	string tag = dish.tag;
+
+	if (tag is null)
+	{
+		stderr.writeln(`Warning: No suitable tag for "` ~ dish ~ `"`);
+		return "";
+	}
+
+	return tag;
 }
 
 auto removeDoubles(Range)(Range veggie, Range carnism)
