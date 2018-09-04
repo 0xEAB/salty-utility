@@ -12,7 +12,7 @@ Utility for processing bording school menus
 ## Usage
 
 ```sh
-sutil --help
+./bin/sutil --help
 
-sutil menu.pdf menu.txt
+./bin/sutil menu.pdf menu.txt
 ```

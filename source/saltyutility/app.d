@@ -59,7 +59,7 @@ void printHelp(string args0, GetoptResult opt)
 
 void printVersionInfo()
 {
-	stdout.writeln(import("version.txt"));
+	stdout.write(import("version.txt"));
 }
 
 int run(File input, File output)
