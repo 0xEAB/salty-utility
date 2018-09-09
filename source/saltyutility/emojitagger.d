@@ -27,6 +27,7 @@ string tag(string dish)
     mixin(Rule!("backerbsen", FoodAndDrink.potOfFood));
 
     // lunch
+    mixin(Rule!("toast", FoodAndDrink.sandwich)); // "Schinken-Käse-Toast"
     mixin(Rule!("spaghetti", FoodAndDrink.spaghetti));
     mixin(Rule!("pasta", FoodAndDrink.spaghetti));
     mixin(Rule!("chili", FoodAndDrink.hotPepper));
@@ -104,7 +105,6 @@ string tag(string dish)
     mixin(Rule!("senf", AnimalsAndNature.sheafOfRice));
     mixin(Rule!("ketchup", FoodAndDrink.tomato));
     mixin(Rule!("kren", AnimalsAndNature.sheafOfRice));
-    mixin(Rule!("toast", FoodAndDrink.sandwich));
     mixin(Rule!("käse", FoodAndDrink.cheeseWedge));
     mixin(Rule!("nudelsalat", FoodAndDrink.stuffedFlatbread));
     mixin(Rule!("nudel", FoodAndDrink.steamingBowl));
