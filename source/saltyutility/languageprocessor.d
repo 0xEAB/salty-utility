@@ -108,5 +108,6 @@ enum betterReadable = [
     ["Kakaozucker", "Kakao-Zucker"],
     ["Kartoffel", "Erdäpfel"],
     ["kuchen", "-Kuchen"],
+    ["sauce", "soß"],
     //["salat", "-Salat"],
 ];
