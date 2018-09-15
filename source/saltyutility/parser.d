@@ -72,7 +72,7 @@ Week parse(Range)(Range text)
                     immutable endOf1stCol = line.indexOf("     ");
 
                     offset2ndCol = endOf1stCol + line[endOf1stCol .. $].countUntil!(
-                            not!isWhite)();
+                            not!isWhite)() - 1;
                     parserState = ParserState.lunch;
                 }
                 else
