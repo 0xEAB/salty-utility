@@ -87,13 +87,13 @@ auto improveReadability(Range)(Range dishes)
 
 private:
 // dfmt off
-enum separators = [
-    "mit",
-    "und",
+immutable separators = [
+    " mit ",
+    " und ",
     ",",
 ];
 
-enum typos = [
+immutable typos = [
     ["  ", " "],
     [" - ", "-"],
     ["- ", "-"],
@@ -101,7 +101,7 @@ enum typos = [
     ["crems", "cremes"],
 ];
 
-enum betterReadable = [
+immutable betterReadable = [
     ["dip", "-Dip"],
     ["gemüse", "-Gemüse"],
     ["Grünem Salat", "grüner Salat"],
