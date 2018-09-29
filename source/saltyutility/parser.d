@@ -12,6 +12,7 @@ import std.conv : to;
 import std.functional : not;
 import std.stdio : stderr;
 import std.string : indexOf, startsWith, strip, stripLeft;
+import std.utf : toUTF8, toUTF16;
 
 struct Week
 {
@@ -44,10 +45,10 @@ Week parse(Range)(Range text)
 
     while (!text.empty)
     {
-        string line = text.front;
+        immutable string line = text.front;
         text.popFront();
 
-        string ln = line.stripLeft;
+        immutable string ln = line.stripLeft;
 
         switch (ln)
         {
@@ -63,16 +64,17 @@ Week parse(Range)(Range text)
         // dfmt on
 
         default:
+            immutable lineF16 = line.toUTF16;
             if (offset2ndCol == -1)
             {
                 if (line.startsWith("Mittag:"))
                 {
                     // there should be at least 5 spaces between the columns
                     // also 5 spaces should be enough to strain off typos (e.g. "a n _ _ a p p l e")
-                    immutable endOf1stCol = line.indexOf("     ");
+                    immutable endOf1stCol = lineF16.indexOf("     "w);
 
-                    offset2ndCol = endOf1stCol + line[endOf1stCol .. $].countUntil!(
-                            not!isWhite)() - 1;
+                    offset2ndCol = endOf1stCol + lineF16[endOf1stCol .. $].countUntil!(
+                            not!isWhite)();
                     parserState = ParserState.lunch;
                 }
                 else
@@ -84,7 +86,7 @@ Week parse(Range)(Range text)
             }
 
             // when there's only 1 column it won't end at offset2ndCol
-            immutable endOf1stCol = (line.length <= offset2ndCol) ? line.length : offset2ndCol;
+            immutable endOf1stCol = (lineF16.length <= offset2ndCol) ? lineF16.length : offset2ndCol;
 
             if (ln.startsWith("Änd")) // "Änderungen vorbehalten"
             {
@@ -93,24 +95,24 @@ Week parse(Range)(Range text)
             }
 
             string carnism = void;
-            if (line.startsWith("Mittag:"))
+            if (lineF16.startsWith("Mittag:"w))
             {
                 parserState = ParserState.lunch;
-                carnism = line[7 .. endOf1stCol].strip;
+                carnism = lineF16[7 .. endOf1stCol].strip.toUTF8;
             }
-            else if (line.startsWith("Abend:"))
+            else if (lineF16.startsWith("Abend:"w))
             {
                 parserState = ParserState.supper;
 
-                if (line.length <= 6)
+                if (lineF16.length <= 6)
                 {
                     continue;
                 }
-                carnism = line[6 .. endOf1stCol].strip;
+                carnism = lineF16[6 .. endOf1stCol].strip.toUTF8;
             }
             else
             {
-                carnism = line[0 .. endOf1stCol].strip;
+                carnism = lineF16[0 .. endOf1stCol].strip.toUTF8;
             }
 
             if (carnism.length == 0)
@@ -125,7 +127,7 @@ Week parse(Range)(Range text)
             // Veggie
             if (endOf1stCol == offset2ndCol)
             {
-                auto veggie = line[offset2ndCol .. $].strip;
+                string veggie = lineF16[offset2ndCol .. $].strip.toUTF8;
                 mixin(Add!("lunchVeggie", "supperVeggie", "veggie"));
             }
 
