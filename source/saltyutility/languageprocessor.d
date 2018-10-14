@@ -104,7 +104,7 @@ immutable typos = [
 immutable betterReadable = [
     ["dip", "-Dip"],
     ["gemüse", "-Gemüse"],
-    ["Grünem Salat", "grüner Salat"],
+    ["grünem Salat", "grüner Salat"],
     ["Kakaozucker", "Kakao-Zucker"],
     ["Kartoffel", "Erdäpfel"],
     ["kuchen", "-Kuchen"],

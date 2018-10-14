@@ -47,6 +47,7 @@ string tag(string dish)
     mixin(Rule!("risipisi", FoodAndDrink.cookedRice));
     mixin(Rule!("risotto", FoodAndDrink.cookedRice));
     mixin(Rule!("couscous", FoodAndDrink.cookedRice));
+    mixin(Rule!("hirsetaler", FoodAndDrink.riceCracker));
     mixin(Rule!("keule", FoodAndDrink.poultryLeg));
     mixin(Rule!("hühn", AnimalsAndNature.hatchingChick));
     mixin(Rule!("huhn", AnimalsAndNature.hatchingChick));
@@ -66,6 +67,8 @@ string tag(string dish)
     mixin(Rule!("knödel", FoodAndDrink.dumpling));
     mixin(Rule!("buchtel", FoodAndDrink.dumpling));
     mixin(Rule!("butter", FoodAndDrink.glassOfMilk));
+    mixin(Rule!("schwammerl", FoodAndDrink.mushroom));
+    mixin(Rule!("pilz", FoodAndDrink.mushroom));
     mixin(Rule!("brokkoli", FoodAndDrink.broccoli));
     mixin(Rule!("broccoli", FoodAndDrink.broccoli));
     mixin(Rule!("karfiol", FoodAndDrink.broccoli));
@@ -75,6 +78,7 @@ string tag(string dish)
     mixin(Rule!("erbsen", FoodAndDrink.cucumber));
     mixin(Rule!("linsen", FoodAndDrink.cucumber));
     mixin(Rule!("rohkost", FoodAndDrink.cucumber));
+    mixin(Rule!("fisole", AnimalsAndNature.seedling));
     mixin(Rule!("apfel", FoodAndDrink.redApple));
     mixin(Rule!("traube", FoodAndDrink.grapes));
     mixin(Rule!("zwetschke", FoodAndDrink.grapes));
@@ -96,6 +100,7 @@ string tag(string dish)
     mixin(Rule!("joghurt", FoodAndDrink.glassOfMilk));
     mixin(Rule!("pesto", AnimalsAndNature.seedling));
     mixin(Rule!("kresse", AnimalsAndNature.seedling));
+    mixin(Rule!("spinat", AnimalsAndNature.leafFlutteringInWind));
     mixin(Rule!("kräuter", AnimalsAndNature.herb));
     mixin(Rule!("kraut", AnimalsAndNature.herb));
     mixin(Rule!("kernöl", Activities.jackOLantern));
@@ -110,6 +115,7 @@ string tag(string dish)
     mixin(Rule!("garnitur", Symbols.radioactive));
     mixin(Rule!("garniert", Symbols.radioactive));
     mixin(Rule!("eier", FoodAndDrink.egg));
+    mixin(Rule!("spiegelei", FoodAndDrink.cooking));
     mixin(Rule!("bergbaron", FoodAndDrink.cheeseWedge));
     mixin(Rule!("emmentaler", FoodAndDrink.cheeseWedge));
     mixin(Rule!("tomate", FoodAndDrink.tomato));
