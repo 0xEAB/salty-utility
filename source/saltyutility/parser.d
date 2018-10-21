@@ -162,9 +162,11 @@ template Case(string day)
 template Add(string lunchProperty, string supperProperty, string dishVariable)
 {
     // dfmt off
-        const char[] Add = `if (!` ~ dishVariable ~ `.startsWith("enthä")) { switch (parserState) with (ParserState) {
-                case lunch: day.` ~ lunchProperty ~ ` ~= ` ~ dishVariable ~ `; break;
-                case supper: day.` ~ supperProperty ~ ` ~= ` ~ dishVariable ~ `; break;
-                default: assert(0, "Error: Dish appeared before day: " ~ ` ~ dishVariable ~ `); }}`;
-        // dfmt on
+    const char[] Add = `if (!` ~ dishVariable ~ `.startsWith("enthä")) {
+        final switch (parserState) with (ParserState) {
+            case lunch: day.` ~ lunchProperty ~ ` ~= ` ~ dishVariable ~ `; break;
+            case supper: day.` ~ supperProperty ~ ` ~= ` ~ dishVariable ~ `; break;
+            case init_: stderr.writeln("Warning: Dish appeared with no time of the day: " ~ ` ~ dishVariable ~ `); break;
+        }}`;
+    // dfmt on
 }
