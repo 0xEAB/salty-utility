@@ -14,7 +14,7 @@ import saltyutility.languageprocessor;
 import saltyutility.parser;
 import saltyutility.pdf;
 
-enum appName = "salt-parser";
+enum appName = "salty-utility";
 
 int run(string[] args)
 {
