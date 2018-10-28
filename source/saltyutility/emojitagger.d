@@ -16,6 +16,11 @@ string tag(string dish)
         const char[] Rule = `if (d.contains("` ~ pattern ~ `")){ return "` ~ tag ~ `"; }`;
     }
 
+    template Rule2(string pattern, string tag)
+    {
+        const char[] Rule2 = `if (dish == "` ~ pattern ~ `"){ return "` ~ tag ~ `"; }`;
+    }
+
     string d = dish.toLower;
 
     // most important
@@ -93,6 +98,7 @@ string tag(string dish)
     mixin(Rule!("ananas", FoodAndDrink.pineapple));
     mixin(Rule!("pudding", FoodAndDrink.custard));
     mixin(Rule!("polenta", FoodAndDrink.earOfCorn));
+    mixin(Rule!("plunder", FoodAndDrink.croissant));
     mixin(Rule!("eis", FoodAndDrink.softIceCream));
     mixin(Rule!("schwarzwurzel", Smileys.pileOfPoo));
     mixin(Rule!("zwiebel", FoodAndDrink.chestnut)); // Ev12
@@ -121,6 +127,7 @@ string tag(string dish)
     mixin(Rule!("spiegelei", FoodAndDrink.cooking));
     mixin(Rule!("bergbaron", FoodAndDrink.cheeseWedge));
     mixin(Rule!("emmentaler", FoodAndDrink.cheeseWedge));
+    mixin(Rule!("jerome", FoodAndDrink.cheeseWedge));
     mixin(Rule!("tomate", FoodAndDrink.tomato));
     mixin(Rule!("mozzarella", FoodAndDrink.cheeseWedge));
     mixin(Rule!("parmesan", FoodAndDrink.cheeseWedge));
@@ -159,6 +166,10 @@ string tag(string dish)
     mixin(Rule!("soß", Smileys.sweatDroplets));
     mixin(Rule!("dip", TravelAndPlaces.droplet));
     mixin(Rule!("cocktail", FoodAndDrink.cocktailGlass));
+
+    // "is" rules
+    mixin(Rule2!("Ei", FoodAndDrink.egg));
+    mixin(Rule2!("Püree", FoodAndDrink.potato));
 
     return null;
 }
