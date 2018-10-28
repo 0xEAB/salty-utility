@@ -166,8 +166,8 @@ template Add(string lunchProperty, string supperProperty, string dishVariable)
         final switch (parserState) with (ParserState) {
             case lunch: day.` ~ lunchProperty ~ ` ~= ` ~ dishVariable ~ `; break;
             case supper: day.` ~ supperProperty ~ ` ~= ` ~ dishVariable ~ `; break;
-            case init_: stderr.writeln("Warning: Possible dish appeared with no time-of-the-day specified: " ~ ` ~ dishVariable ~ `);
-                break;
+            case init_: stderr.writeln("Warning: Possible dish appeared with no time-of-the-day specified: " ~ ` ~
+                dishVariable ~ `); break;
         }}`;
     // dfmt on
 }
