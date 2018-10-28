@@ -162,7 +162,7 @@ template Case(string day)
 template Add(string lunchProperty, string supperProperty, string dishVariable)
 {
     // dfmt off
-    const char[] Add = `if (!` ~ dishVariable ~ `.startsWith("enthä")) {
+    const char[] Add = `if (!` ~ dishVariable ~ `[1 .. $].startsWith("nthält:")) {
         final switch (parserState) with (ParserState) {
             case lunch: day.` ~ lunchProperty ~ ` ~= ` ~ dishVariable ~ `; break;
             case supper: day.` ~ supperProperty ~ ` ~= ` ~ dishVariable ~ `; break;
