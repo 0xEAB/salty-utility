@@ -95,24 +95,30 @@ Week parse(Range)(Range text)
             }
 
             string carnism = void;
-            if (lineF16.startsWith("Mittag:"w))
+
+            immutable offsetLunch = lineF16.indexOf("Mittag:"w);
+            if ((offsetLunch == 0) || ln.startsWith("Mittag:"))
             {
                 parserState = ParserState.lunch;
-                carnism = lineF16[7 .. endOf1stCol].strip.toUTF8;
-            }
-            else if (lineF16.startsWith("Abend:"w))
-            {
-                parserState = ParserState.supper;
-
-                if (lineF16.length <= 6)
-                {
-                    continue;
-                }
-                carnism = lineF16[6 .. endOf1stCol].strip.toUTF8;
+                carnism = lineF16[(7 + offsetLunch) .. endOf1stCol].strip.toUTF8;
             }
             else
             {
-                carnism = lineF16[0 .. endOf1stCol].strip.toUTF8;
+                immutable offsetSupper = lineF16.indexOf("Abend:"w);
+                if ((offsetSupper == 0) || ln.startsWith("Abend:"))
+                {
+                    parserState = ParserState.supper;
+
+                    if (lineF16.length <= 6)
+                    {
+                        continue;
+                    }
+                    carnism = lineF16[(6 + offsetSupper) .. endOf1stCol].strip.toUTF8;
+                }
+                else
+                {
+                    carnism = lineF16[0 .. endOf1stCol].strip.toUTF8;
+                }
             }
 
             if (carnism.length == 0)
