@@ -44,6 +44,7 @@ string tag(string dish)
     mixin(Rule!("fisch", AnimalsAndNature.fish));
     mixin(Rule!("lachs", AnimalsAndNature.fish));
     mixin(Rule!("pangasius", AnimalsAndNature.fish));
+    mixin(Rule!("dorsch", AnimalsAndNature.fish));
     mixin(Rule!("chinesisch", Symbols.japanesePassingGradeButton));
     mixin(Rule!("pizza", FoodAndDrink.pizza));
     mixin(Rule!("pommes", FoodAndDrink.frenchFries));
@@ -60,6 +61,7 @@ string tag(string dish)
     mixin(Rule!("rind", AnimalsAndNature.cow));
     mixin(Rule!("tafelspitz", AnimalsAndNature.cow));
     mixin(Rule!("schwein", AnimalsAndNature.pig));
+    mixin(Rule!("geschnetzeltes", FoodAndDrink.curryRice));
     mixin(Rule!("fleisch", FoodAndDrink.cutOfMeat));
     mixin(Rule!("schinken", FoodAndDrink.bacon));
     mixin(Rule!("xöchz", FoodAndDrink.bacon));
@@ -84,6 +86,7 @@ string tag(string dish)
     mixin(Rule!("stern", TravelAndPlaces.glowingStar));
     mixin(Rule!("erbsen", FoodAndDrink.cucumber));
     mixin(Rule!("linsen", FoodAndDrink.cucumber));
+    mixin(Rule!("humus", FoodAndDrink.cucumber));
     mixin(Rule!("rohkost", FoodAndDrink.cucumber));
     mixin(Rule!("fisole", AnimalsAndNature.seedling));
     mixin(Rule!("apfel", FoodAndDrink.redApple));
@@ -153,7 +156,8 @@ string tag(string dish)
     mixin(Rule!("platte", FoodAndDrink.forkAndKnifeWithPlate));
     mixin(Rule!("aufstrich", FoodAndDrink.forkAndKnife));
     mixin(Rule!("paste", FoodAndDrink.forkAndKnife));
-    mixin(Rule!("kakao-zucker", TravelAndPlaces.fog));
+    mixin(Rule!("zucker", TravelAndPlaces.fog));
+    mixin(Rule!("kakao", TravelAndPlaces.fog));
     mixin(Rule!("topfen", FoodAndDrink.glassOfMilk));
     mixin(Rule!("griechisch", Flags.flagGreece));
     mixin(Rule!("salat", FoodAndDrink.greenSalad));
@@ -166,6 +170,7 @@ string tag(string dish)
     mixin(Rule!("soß", Smileys.sweatDroplets));
     mixin(Rule!("dip", TravelAndPlaces.droplet));
     mixin(Rule!("cocktail", FoodAndDrink.cocktailGlass));
+    mixin(Rule!("kalt", TravelAndPlaces.snowflake));
 
     // "is" rules
     mixin(Rule2!("Ei", FoodAndDrink.egg));
