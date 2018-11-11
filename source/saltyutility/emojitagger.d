@@ -55,6 +55,7 @@ string tag(string dish)
     mixin(Rule!("risotto", FoodAndDrink.cookedRice));
     mixin(Rule!("couscous", FoodAndDrink.cookedRice));
     mixin(Rule!("hirsetaler", FoodAndDrink.riceCracker));
+    mixin(Rule!("gulasch", FoodAndDrink.shallowPanOfFood));
     mixin(Rule!("keule", FoodAndDrink.poultryLeg));
     mixin(Rule!("hühn", AnimalsAndNature.hatchingChick));
     mixin(Rule!("huhn", AnimalsAndNature.hatchingChick));
@@ -74,6 +75,7 @@ string tag(string dish)
     mixin(Rule!("erdäpfel", FoodAndDrink.potato));
     mixin(Rule!("knödel", FoodAndDrink.dumpling));
     mixin(Rule!("buchtel", FoodAndDrink.dumpling));
+    mixin(Rule!("krapfen", FoodAndDrink.bagel));
     mixin(Rule!("butter", FoodAndDrink.glassOfMilk));
     mixin(Rule!("schwammerl", FoodAndDrink.mushroom));
     mixin(Rule!("pilz", FoodAndDrink.mushroom));
@@ -151,6 +153,7 @@ string tag(string dish)
     mixin(Rule!("nudel", FoodAndDrink.steamingBowl));
     mixin(Rule!("hörnchen", AnimalsAndNature.chipmunk));
     mixin(Rule!("spätzle", FoodAndDrink.steamingBowl));
+    mixin(Rule!("spiralen", Objects.dna));
     mixin(Rule!("hauerteller", FoodAndDrink.forkAndKnifeWithPlate));
     mixin(Rule!("jaus", FoodAndDrink.forkAndKnifeWithPlate));
     mixin(Rule!("platte", FoodAndDrink.forkAndKnifeWithPlate));
