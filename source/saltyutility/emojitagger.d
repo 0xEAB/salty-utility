@@ -30,6 +30,7 @@ string tag(string dish)
     // soup
     mixin(Rule!("suppe", FoodAndDrink.potOfFood));
     mixin(Rule!("backerbsen", FoodAndDrink.potOfFood));
+    mixin(Rule!("minestrone", FoodAndDrink.potOfFood));
 
     // lunch
     mixin(Rule!("toast", FoodAndDrink.sandwich)); // "Schinken-Käse-Toast"
@@ -96,6 +97,8 @@ string tag(string dish)
     mixin(Rule!("zwetschke", FoodAndDrink.grapes));
     mixin(Rule!("kirsch", FoodAndDrink.cherries));
     mixin(Rule!("pfirsich", FoodAndDrink.peach));
+    mixin(Rule!("mandarine", FoodAndDrink.tangerine));
+    mixin(Rule!("orange", FoodAndDrink.tangerine));
     mixin(Rule!("marille", FoodAndDrink.tangerine));
     mixin(Rule!("birne", FoodAndDrink.pear));
     mixin(Rule!("erdbeer", FoodAndDrink.strawberry));
@@ -103,6 +106,7 @@ string tag(string dish)
     mixin(Rule!("ananas", FoodAndDrink.pineapple));
     mixin(Rule!("pudding", FoodAndDrink.custard));
     mixin(Rule!("polenta", FoodAndDrink.earOfCorn));
+    mixin(Rule!("croissant", FoodAndDrink.croissant));
     mixin(Rule!("plunder", FoodAndDrink.croissant));
     mixin(Rule!("eis", FoodAndDrink.softIceCream));
     mixin(Rule!("schwarzwurzel", Smileys.pileOfPoo));
@@ -124,6 +128,7 @@ string tag(string dish)
     mixin(Rule!("brot", FoodAndDrink.bread));
     mixin(Rule!("semmel", FoodAndDrink.bread));
     mixin(Rule!("semmerl", FoodAndDrink.bread));
+    mixin(Rule!("gebäck", FoodAndDrink.bread));
     mixin(Rule!("breze", FoodAndDrink.pretzel));
     mixin(Rule!("garnierung", Symbols.radioactive));
     mixin(Rule!("garnitur", Symbols.radioactive));
@@ -161,6 +166,7 @@ string tag(string dish)
     mixin(Rule!("paste", FoodAndDrink.forkAndKnife));
     mixin(Rule!("zucker", TravelAndPlaces.fog));
     mixin(Rule!("kakao", TravelAndPlaces.fog));
+    mixin(Rule!("mohn", TravelAndPlaces.fog));
     mixin(Rule!("topfen", FoodAndDrink.glassOfMilk));
     mixin(Rule!("griechisch", Flags.flagGreece));
     mixin(Rule!("salat", FoodAndDrink.greenSalad));
