@@ -12,7 +12,7 @@ Utility for processing bording school menus
 ## Usage
 
 ```sh
-./bin/sutil --help
+./bin/salty-utility --help
 
-./bin/sutil menu.pdf menu.txt
+./bin/salty-utility menu.pdf menu.txt
 ```
