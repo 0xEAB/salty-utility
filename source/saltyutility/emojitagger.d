@@ -60,6 +60,7 @@ string tag(string dish)
     mixin(Rule!("keule", FoodAndDrink.poultryLeg));
     mixin(Rule!("hühn", AnimalsAndNature.hatchingChick));
     mixin(Rule!("huhn", AnimalsAndNature.hatchingChick));
+    mixin(Rule!("chicken", AnimalsAndNature.hatchingChick));
     mixin(Rule!("rind", AnimalsAndNature.cow));
     mixin(Rule!("tafelspitz", AnimalsAndNature.cow));
     mixin(Rule!("schwein", AnimalsAndNature.pig));
@@ -72,9 +73,11 @@ string tag(string dish)
     mixin(Rule!("speck", FoodAndDrink.bacon));
     mixin(Rule!("pute", AnimalsAndNature.turkey));
     mixin(Rule!("schnitz", AnimalsAndNature.pig));
+    mixin(Rule!("tofu", FoodAndDrink.oden));
     mixin(Rule!("sandwich", FoodAndDrink.sandwich));
     mixin(Rule!("schmarr", FoodAndDrink.pancakes));
     mixin(Rule!("fleckerl", FoodAndDrink.bentoBox));
+    mixin(Rule!("frühlingsrolle", FoodAndDrink.burrito));
     mixin(Rule!("erdäpfel", FoodAndDrink.potato));
     mixin(Rule!("knödel", FoodAndDrink.dumpling));
     mixin(Rule!("buchtel", FoodAndDrink.dumpling));
@@ -107,6 +110,7 @@ string tag(string dish)
     mixin(Rule!("erdbeer", FoodAndDrink.strawberry));
     mixin(Rule!("banane", FoodAndDrink.banana));
     mixin(Rule!("ananas", FoodAndDrink.pineapple));
+    mixin(Rule!("kiwi", FoodAndDrink.kiwiFruit));
     mixin(Rule!("pudding", FoodAndDrink.custard));
     mixin(Rule!("polenta", FoodAndDrink.earOfCorn));
     mixin(Rule!("croissant", FoodAndDrink.croissant));
@@ -119,6 +123,7 @@ string tag(string dish)
     mixin(Rule!("gemüse", FoodAndDrink.cucumber));
     mixin(Rule!("gnocchi", FoodAndDrink.dumpling));
     mixin(Rule!("joghurt", FoodAndDrink.glassOfMilk));
+    mixin(Rule!("jogurt", FoodAndDrink.glassOfMilk));
     mixin(Rule!("pesto", AnimalsAndNature.seedling));
     mixin(Rule!("kresse", AnimalsAndNature.seedling));
     mixin(Rule!("spinat", AnimalsAndNature.leafFlutteringInWind));
@@ -175,12 +180,14 @@ string tag(string dish)
     mixin(Rule!("salat", FoodAndDrink.greenSalad));
     mixin(Rule!("nockerl", FoodAndDrink.dumpling));
     mixin(Rule!("kuchen", FoodAndDrink.pie));
+    mixin(Rule!("schoko", FoodAndDrink.chocolateBar));
     mixin(Rule!("schnitten", FoodAndDrink.chocolateBar));
     mixin(Rule!("schnitte", FoodAndDrink.pie));
     mixin(Rule!("strudel", FoodAndDrink.burrito));
     mixin(Rule!("rahm", FoodAndDrink.glassOfMilk));
     mixin(Rule!("soß", Smileys.sweatDroplets));
     mixin(Rule!("dip", TravelAndPlaces.droplet));
+    mixin(Rule!("curry", FoodAndDrink.curryRice));
     mixin(Rule!("cocktail", FoodAndDrink.cocktailGlass));
     mixin(Rule!("kalt", TravelAndPlaces.snowflake));
 
