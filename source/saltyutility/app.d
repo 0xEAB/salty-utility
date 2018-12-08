@@ -6,6 +6,7 @@
  +/
 module saltyutility.app;
 
+import core.memory : GC;
 import std.getopt : config, defaultGetoptPrinter, getopt, GetoptResult;
 import std.stdio;
 
@@ -70,6 +71,12 @@ int run(File input, File output)
 	foreach (Day day; w.days)
 	{
 		import emojid.animalsandnature : AnimalsAndNature;
+
+		GC.disable();
+		scope (exit)
+		{
+			GC.enable();
+		}
 
 		auto lunch = day.lunch.reArrange.fixTypos.improveReadability;
 		auto lunchVeggie = day.lunchVeggie.reArrange.fixTypos.improveReadability;

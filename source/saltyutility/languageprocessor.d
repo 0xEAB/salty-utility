@@ -88,9 +88,10 @@ auto improveReadability(Range)(Range dishes)
 private:
 // dfmt off
 immutable separators = [
+    ",",
     " mit ",
     " und ",
-    ",",
+    " auf ",
 ];
 
 immutable typos = [
@@ -104,7 +105,7 @@ immutable typos = [
 immutable betterReadable = [
     ["dip", "-Dip"],
     ["gemüse", "-Gemüse"],
-    ["grünem Salat", "grüner Salat"],
+    ["rünem Salat", "rüner Salat"], // "grünem" -> "grüner"
     ["Kakaozucker", "Kakao-Zucker"],
     ["Kartoffel", "Erdäpfel"],
     ["kuchen", "-Kuchen"],
