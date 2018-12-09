@@ -121,7 +121,9 @@ void printVersionInfo()
 
 int run(File input, File output)
 {
-    Week w = input.getText.parse;
+    import std.string : endsWith;
+
+    Week w = (input.name.endsWith(".pdf")) ? input.getText.parse : input.byLineCopy.parse;
     output.writeln(w.title, "\n");
 
     foreach (Day day; w.days)
