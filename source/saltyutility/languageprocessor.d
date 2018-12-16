@@ -99,6 +99,7 @@ immutable typos = [
     ["- ", "-"],
     ["Nuß", "Nuss"],
     ["crems", "cremes"],
+    ["Wachauerlaibchen", "Wachauer Laberl"],
 ];
 
 immutable betterReadable = [

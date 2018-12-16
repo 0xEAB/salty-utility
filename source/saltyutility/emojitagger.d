@@ -78,6 +78,7 @@ string tag(string dish)
     mixin(Rule!("schmarr", FoodAndDrink.pancakes));
     mixin(Rule!("fleckerl", FoodAndDrink.bentoBox));
     mixin(Rule!("frühlingsrolle", FoodAndDrink.burrito));
+    mixin(Rule!("kroketten", TravelAndPlaces.rocket));
     mixin(Rule!("erdäpfel", FoodAndDrink.potato));
     mixin(Rule!("knödel", FoodAndDrink.dumpling));
     mixin(Rule!("buchtel", FoodAndDrink.dumpling));
@@ -194,6 +195,7 @@ string tag(string dish)
     // "is" rules
     mixin(Rule2!("Ei", FoodAndDrink.egg));
     mixin(Rule2!("Püree", FoodAndDrink.potato));
+    mixin(Rule2!("Wachauer Laberl", FoodAndDrink.bread));
 
     return null;
 }
