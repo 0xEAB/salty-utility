@@ -1,5 +1,5 @@
 /+
-                    Copyright 0xEAB 2016 - 2018.
+                    Copyright 0xEAB 2016 - 2019.
      Distributed under the Boost Software License, Version 1.0.
         (See accompanying file LICENSE_1_0.txt or copy at
               https://www.boost.org/LICENSE_1_0.txt)
@@ -88,9 +88,10 @@ auto improveReadability(Range)(Range dishes)
 private:
 // dfmt off
 immutable separators = [
+    ",",
     " mit ",
     " und ",
-    ",",
+    " auf ",
 ];
 
 immutable typos = [
@@ -105,7 +106,7 @@ immutable typos = [
 immutable betterReadable = [
     ["dip", "-Dip"],
     ["gemüse", "-Gemüse"],
-    ["grünem Salat", "grüner Salat"],
+    ["rünem Salat", "rüner Salat"], // "grünem" -> "grüner"
     ["Kakaozucker", "Kakao-Zucker"],
     ["Kartoffel", "Erdäpfel"],
     ["kuchen", "-Kuchen"],
