@@ -12,10 +12,9 @@ import std.getopt : config, defaultGetoptPrinter, getopt, GetoptResult;
 import std.file : exists;
 import std.stdio;
 
-import saltyutility.emojitagger;
-import saltyutility.languageprocessor;
 import saltyutility.parser;
 import saltyutility.pdf;
+import saltyutility.output;
 
 enum appName = "salty-utility";
 
@@ -23,12 +22,14 @@ int run(string[] args)
 {
     bool optDisableGC;
     bool optPrintVersionInfo;
+    bool optUseSQL;
 
     // dfmt off
     GetoptResult opt = getopt(
         args,
         config.passThrough,
         "nogc", "Disable the garbage collector (may lead to memory leaks)", &optDisableGC,
+        "sql", "Use SQL output format", &optUseSQL,
         "version", "Display the version of this program.", &optPrintVersionInfo
     );
     // dfmt on
@@ -77,7 +78,7 @@ int run(string[] args)
         return 1;
     }
 
-    return run(input, outpt);
+    return run(input, outpt, optUseSQL);
 }
 
 File openFile(bool outputNotInput)(string file)
@@ -119,81 +120,19 @@ void printVersionInfo()
     stdout.write(import("version.txt"));
 }
 
-int run(File input, File output)
+int run(File input, File output, bool useSQL)
 {
     import std.string : endsWith;
 
     Week w = (input.name.endsWith(".pdf")) ? input.getText.parse : input.byLineCopy.parse;
-    output.writeln(w.title, "\n");
 
-    foreach (Day day; w.days)
+    if (useSQL || output.name.endsWith(".sql"))
     {
-        import emojid.animalsandnature : AnimalsAndNature;
-
-        auto lunch = day.lunch.reArrange.fixTypos.improveReadability;
-        auto lunchVeggie = day.lunchVeggie.reArrange.fixTypos.improveReadability;
-        auto supper = day.supper.reArrange.fixTypos.improveReadability;
-        auto supperVeggie = day.supperVeggie.reArrange.fixTypos.improveReadability;
-
-        output.writeln(day.name ~ " z'Mittag:");
-        foreach (dish; lunch)
-        {
-            output.writeln(dish.safeTag ~ "  " ~ dish);
-        }
-
-        output.writeln();
-        foreach (dish; lunchVeggie.removeDoubles(lunch))
-        {
-
-            output.writeln("" ~ AnimalsAndNature.fourLeafClover, dish.safeTag ~ "  " ~ dish);
-        }
-
-        output.writeln("\n -------------------- \n\nZan Nochtmoi:");
-        foreach (dish; supper)
-        {
-            output.writeln(dish.safeTag ~ "  " ~ dish);
-        }
-
-        output.writeln();
-        foreach (dish; supperVeggie.removeDoubles(supper))
-        {
-            output.writeln("" ~ AnimalsAndNature.fourLeafClover, dish.safeTag ~ "  " ~ dish);
-        }
-
-        output.writeln("\n--------------------------------------------------\n");
+        print!(Format.SQL)(w, output);
     }
-
-    output.writeln();
-    output.flush();
-
+    else
+    {
+        print!(Format.text)(w, output);
+    }
     return 0;
-}
-
-string safeTag(string dish)
-{
-    string tag = dish.tag;
-
-    if (tag is null)
-    {
-        stderr.writeln(`Warning: No suitable tag for "` ~ dish ~ `"`);
-        return "";
-    }
-
-    return tag;
-}
-
-auto removeDoubles(Range)(Range veggie, Range carnism)
-{
-    import std.algorithm : filter;
-
-    return veggie.filter!(d => {
-        foreach (cd; carnism)
-        {
-            if (cd == d)
-            {
-                return false;
-            }
-        }
-        return true;
-    }());
 }
