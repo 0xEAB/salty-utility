@@ -79,6 +79,14 @@ void print(Format f)(Week w, File output)
             output.write(dish.safeTag ~ "  " ~ dish);
         }
 
+        static if (SQL)
+        {
+            output.write(`\n`);
+        }
+        else
+        {
+            output.writeln();
+        }
         foreach (dish; lunchVeggie.removeDoubles(lunch))
         {
             static if (SQL)
@@ -97,7 +105,7 @@ void print(Format f)(Week w, File output)
             output.writeln("');");
         }
 
-        output.writeln("\n -------------------- \n");
+        output.writeln("\n -- ----------------- \n");
 
         static if (SQL)
         {
@@ -119,6 +127,14 @@ void print(Format f)(Week w, File output)
             output.write(dish.safeTag ~ "  " ~ dish);
         }
 
+        static if (SQL)
+        {
+            output.write(`\n`);
+        }
+        else
+        {
+            output.writeln();
+        }
         foreach (dish; supperVeggie.removeDoubles(supper))
         {
             static if (SQL)
@@ -138,7 +154,7 @@ void print(Format f)(Week w, File output)
             date += oneDay;
         }
 
-        output.writeln("\n--------------------------------------------------\n");
+        output.writeln("\n-- -----------------------------------------------\n");
     }
 
     output.writeln();
