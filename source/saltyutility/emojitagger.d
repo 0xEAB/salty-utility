@@ -65,6 +65,7 @@ string tag(string dish)
     mixin(Rule!("tafelspitz", AnimalsAndNature.cow));
     mixin(Rule!("schwein", AnimalsAndNature.pig));
     mixin(Rule!("faschierter braten", FoodAndDrink.curryRice));
+    mixin(Rule!("faschierte laibchen", FoodAndDrink.curryRice));
     mixin(Rule!("geschnetzeltes", FoodAndDrink.curryRice));
     mixin(Rule!("fleisch", FoodAndDrink.cutOfMeat));
     mixin(Rule!("kotelett", FoodAndDrink.cutOfMeat));
@@ -74,6 +75,7 @@ string tag(string dish)
     mixin(Rule!("pute", AnimalsAndNature.turkey));
     mixin(Rule!("schnitz", AnimalsAndNature.pig));
     mixin(Rule!("tofu", FoodAndDrink.oden));
+    mixin(Rule!("eintopf", FoodAndDrink.shallowPanOfFood));
     mixin(Rule!("sandwich", FoodAndDrink.sandwich));
     mixin(Rule!("schmarr", FoodAndDrink.pancakes));
     mixin(Rule!("fleckerl", FoodAndDrink.bentoBox));
@@ -138,6 +140,7 @@ string tag(string dish)
     mixin(Rule!("semmel", FoodAndDrink.bread));
     mixin(Rule!("semmerl", FoodAndDrink.bread));
     mixin(Rule!("gebäck", FoodAndDrink.bread));
+    mixin(Rule!("kornspitz", FoodAndDrink.baguetteBread));
     mixin(Rule!("breze", FoodAndDrink.pretzel));
     mixin(Rule!("garnierung", Symbols.radioactive));
     mixin(Rule!("garnitur", Symbols.radioactive));
@@ -174,6 +177,7 @@ string tag(string dish)
     mixin(Rule!("aufstrich", FoodAndDrink.forkAndKnife));
     mixin(Rule!("paste", FoodAndDrink.forkAndKnife));
     mixin(Rule!("zucker", TravelAndPlaces.fog));
+    mixin(Rule!("zimt", TravelAndPlaces.fog));
     mixin(Rule!("kakao", TravelAndPlaces.fog));
     mixin(Rule!("mohn", TravelAndPlaces.fog));
     mixin(Rule!("topfen", FoodAndDrink.glassOfMilk));
@@ -186,6 +190,7 @@ string tag(string dish)
     mixin(Rule!("schnitte", FoodAndDrink.pie));
     mixin(Rule!("strudel", FoodAndDrink.burrito));
     mixin(Rule!("rahm", FoodAndDrink.glassOfMilk));
+    mixin(Rule!("Sauce tartare", Smileys.sweatDroplets));
     mixin(Rule!("soß", Smileys.sweatDroplets));
     mixin(Rule!("dip", TravelAndPlaces.droplet));
     mixin(Rule!("curry", FoodAndDrink.curryRice));

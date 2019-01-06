@@ -111,5 +111,6 @@ immutable betterReadable = [
     ["kuchen", "-Kuchen"],
     ["sauce", "soß"],
     ["Geselchtes", "Xöchz"],
+    ["Sc. Tartare", "Sauce tartare"]
     //["salat", "-Salat"],
 ];
