@@ -145,6 +145,7 @@ string tag(string dish)
     mixin(Rule!("garnierung", Symbols.radioactive));
     mixin(Rule!("garnitur", Symbols.radioactive));
     mixin(Rule!("garniert", Symbols.radioactive));
+    mixin(Rule!("dreierlei aufstriche", FoodAndDrink.forkAndKnife));
     mixin(Rule!("eier", FoodAndDrink.egg));
     mixin(Rule!("spiegelei", FoodAndDrink.cooking));
     mixin(Rule!("bergbaron", FoodAndDrink.cheeseWedge));
