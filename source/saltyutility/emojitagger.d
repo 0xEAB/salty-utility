@@ -190,7 +190,7 @@ string tag(string dish)
     mixin(Rule!("schnitte", FoodAndDrink.pie));
     mixin(Rule!("strudel", FoodAndDrink.burrito));
     mixin(Rule!("rahm", FoodAndDrink.glassOfMilk));
-    mixin(Rule!("Sauce tartare", Smileys.sweatDroplets));
+    mixin(Rule!("sauce tartare", Smileys.sweatDroplets));
     mixin(Rule!("soß", Smileys.sweatDroplets));
     mixin(Rule!("dip", TravelAndPlaces.droplet));
     mixin(Rule!("curry", FoodAndDrink.curryRice));
