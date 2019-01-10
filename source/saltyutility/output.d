@@ -65,7 +65,7 @@ void print(Format f)(Week w, File output)
             output.write('\'', date.year, '-', uMonth, '-', date.day, " 09:10:00',\n'");
         }
 
-        output.write(day.name ~ " z’Mittag:");
+        output.write(day.name, " z’Mittag:");
         foreach (dish; lunch)
         {
             static if (SQL)
@@ -110,10 +110,10 @@ void print(Format f)(Week w, File output)
         static if (SQL)
         {
             output.writeln("INSERT INTO botcaster(announce, message) VALUES(");
-            output.writeln('\'', date.year, '-', uMonth, '-', date.day, " 09:10:00',");
+            output.write('\'', date.year, '-', uMonth, '-', date.day, " 09:10:00',\n'");
         }
 
-        output.write("'Zan Nochtmoi:");
+        output.write("Zan Nochtmoi:");
         foreach (dish; supper)
         {
             static if (SQL)
