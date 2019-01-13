@@ -15,4 +15,5 @@ Utility for processing bording school menus
 ./bin/salty-utility --help
 
 ./bin/salty-utility menu.pdf menu.txt
+./bin/salty-utility menu.pdf menu.sql
 ```
