@@ -179,6 +179,7 @@ string tag(string dish)
     mixin(Rule!("hauerteller", FoodAndDrink.forkAndKnifeWithPlate));
     mixin(Rule!("jaus", FoodAndDrink.forkAndKnifeWithPlate));
     mixin(Rule!("platte", FoodAndDrink.forkAndKnifeWithPlate));
+    mixin(Rule!("liptauer", FoodAndDrink.forkAndKnife));
     mixin(Rule!("aufstrich", FoodAndDrink.forkAndKnife));
     mixin(Rule!("paste", FoodAndDrink.forkAndKnife));
     mixin(Rule!("zucker", TravelAndPlaces.fog));
