@@ -36,6 +36,7 @@ string tag(string dish)
     mixin(Rule!("toast", FoodAndDrink.sandwich)); // "Schinken-Käse-Toast"
     mixin(Rule!("baguette", FoodAndDrink.baguetteBread)); // "Käse-Knoblauch-Baguette"
     mixin(Rule!("stangerl", FoodAndDrink.baguetteBread));
+    mixin(Rule!("burger", FoodAndDrink.hamburger));
     mixin(Rule!("spaghetti", FoodAndDrink.spaghetti));
     mixin(Rule!("pasta", FoodAndDrink.spaghetti));
     mixin(Rule!("lasagne", FoodAndDrink.spaghetti));
@@ -52,8 +53,6 @@ string tag(string dish)
     mixin(Rule!("pommes", FoodAndDrink.frenchFries));
     mixin(Rule!("knacker", FoodAndDrink.hotDog));
     mixin(Rule!("augsburger", FoodAndDrink.hotDog));
-    mixin(Rule!("reis", FoodAndDrink.cookedRice));
-    mixin(Rule!("risipisi", FoodAndDrink.cookedRice));
     mixin(Rule!("risotto", FoodAndDrink.cookedRice));
     mixin(Rule!("couscous", FoodAndDrink.cookedRice));
     mixin(Rule!("hirsetaler", FoodAndDrink.riceCracker));
@@ -62,9 +61,11 @@ string tag(string dish)
     mixin(Rule!("hühn", AnimalsAndNature.hatchingChick));
     mixin(Rule!("huhn", AnimalsAndNature.hatchingChick));
     mixin(Rule!("chicken", AnimalsAndNature.hatchingChick));
+    mixin(Rule!("hendl", AnimalsAndNature.hatchingChick));
     mixin(Rule!("rind", AnimalsAndNature.cow));
     mixin(Rule!("tafelspitz", AnimalsAndNature.cow));
     mixin(Rule!("schwein", AnimalsAndNature.pig));
+    mixin(Rule!("reisfleisch", FoodAndDrink.curryRice));
     mixin(Rule!("faschierter braten", FoodAndDrink.curryRice));
     mixin(Rule!("faschierte laibchen", FoodAndDrink.curryRice));
     mixin(Rule!("geschnetzeltes", FoodAndDrink.curryRice));
@@ -76,6 +77,8 @@ string tag(string dish)
     mixin(Rule!("pute", AnimalsAndNature.turkey));
     mixin(Rule!("schnitz", AnimalsAndNature.pig));
     mixin(Rule!("tofu", FoodAndDrink.oden));
+    mixin(Rule!("reis", FoodAndDrink.cookedRice));
+    mixin(Rule!("risipisi", FoodAndDrink.cookedRice));
     mixin(Rule!("eintopf", FoodAndDrink.shallowPanOfFood));
     mixin(Rule!("sandwich", FoodAndDrink.sandwich));
     mixin(Rule!("schmarr", FoodAndDrink.pancakes));
@@ -137,6 +140,10 @@ string tag(string dish)
     mixin(Rule!("öl", TravelAndPlaces.oilDrum));
 
     // supper
+    if (!d.contains("dreier"))
+    {
+        mixin(Rule!("eier", FoodAndDrink.egg));
+    }
     mixin(Rule!("brot", FoodAndDrink.bread));
     mixin(Rule!("semmel", FoodAndDrink.bread));
     mixin(Rule!("semmerl", FoodAndDrink.bread));
@@ -146,9 +153,7 @@ string tag(string dish)
     mixin(Rule!("garnierung", Symbols.radioactive));
     mixin(Rule!("garnitur", Symbols.radioactive));
     mixin(Rule!("garniert", Symbols.radioactive));
-    mixin(Rule!("dreierlei aufstriche", FoodAndDrink.forkAndKnife));
     mixin(Rule!("gugelhupf", FoodAndDrink.moonCake));
-    mixin(Rule!("eier", FoodAndDrink.egg));
     mixin(Rule!("rührei", FoodAndDrink.egg));
     mixin(Rule!("spiegelei", FoodAndDrink.cooking));
     mixin(Rule!("bergbaron", FoodAndDrink.cheeseWedge));
@@ -161,6 +166,7 @@ string tag(string dish)
     mixin(Rule!("leberkäs", AnimalsAndNature.unicornFace));
     mixin(Rule!("frankfurter", FoodAndDrink.hotDog));
     mixin(Rule!("würst", FoodAndDrink.hotDog));
+    mixin(Rule!("schweiz", Flags.flagSwitzerland));
     mixin(Rule!("wurstsalat", FoodAndDrink.stuffedFlatbread));
     mixin(Rule!("wurstplatte", FoodAndDrink.forkAndKnifeWithPlate));
     mixin(Rule!("wurst", FoodAndDrink.hotDog));
@@ -181,6 +187,7 @@ string tag(string dish)
     mixin(Rule!("platte", FoodAndDrink.forkAndKnifeWithPlate));
     mixin(Rule!("liptauer", FoodAndDrink.forkAndKnife));
     mixin(Rule!("aufstrich", FoodAndDrink.forkAndKnife));
+    mixin(Rule!("hummus", FoodAndDrink.forkAndKnife));
     mixin(Rule!("paste", FoodAndDrink.forkAndKnife));
     mixin(Rule!("zucker", TravelAndPlaces.fog));
     mixin(Rule!("zimt", TravelAndPlaces.fog));
@@ -188,6 +195,7 @@ string tag(string dish)
     mixin(Rule!("mohn", TravelAndPlaces.fog));
     mixin(Rule!("topfen", FoodAndDrink.glassOfMilk));
     mixin(Rule!("griechisch", Flags.flagGreece));
+    mixin(Rule!("französisch", Flags.flagFrance));
     mixin(Rule!("salat", FoodAndDrink.greenSalad));
     mixin(Rule!("nockerl", FoodAndDrink.dumpling));
     mixin(Rule!("kuchen", FoodAndDrink.pie));
