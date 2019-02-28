@@ -71,6 +71,7 @@ string tag(string dish)
     mixin(Rule!("geschnetzeltes", FoodAndDrink.curryRice));
     mixin(Rule!("fleisch", FoodAndDrink.cutOfMeat));
     mixin(Rule!("kotelett", FoodAndDrink.cutOfMeat));
+    mixin(Rule!("cevapcici", FoodAndDrink.hotDog));
     mixin(Rule!("schinken", FoodAndDrink.bacon));
     mixin(Rule!("xöchz", FoodAndDrink.bacon));
     mixin(Rule!("speck", FoodAndDrink.bacon));
@@ -79,6 +80,7 @@ string tag(string dish)
     mixin(Rule!("tofu", FoodAndDrink.oden));
     mixin(Rule!("reis", FoodAndDrink.cookedRice));
     mixin(Rule!("risipisi", FoodAndDrink.cookedRice));
+    mixin(Rule!("risibisi", FoodAndDrink.cookedRice));
     mixin(Rule!("eintopf", FoodAndDrink.shallowPanOfFood));
     mixin(Rule!("sandwich", FoodAndDrink.sandwich));
     mixin(Rule!("schmarr", FoodAndDrink.pancakes));
@@ -132,6 +134,7 @@ string tag(string dish)
     mixin(Rule!("joghurt", FoodAndDrink.glassOfMilk));
     mixin(Rule!("jogurt", FoodAndDrink.glassOfMilk));
     mixin(Rule!("pesto", AnimalsAndNature.seedling));
+    mixin(Rule!("letscho", FoodAndDrink.cannedFood));
     mixin(Rule!("kresse", AnimalsAndNature.seedling));
     mixin(Rule!("spinat", AnimalsAndNature.leafFlutteringInWind));
     mixin(Rule!("kräuter", AnimalsAndNature.herb));
@@ -168,7 +171,7 @@ string tag(string dish)
     mixin(Rule!("würst", FoodAndDrink.hotDog));
     mixin(Rule!("schweiz", Flags.flagSwitzerland));
     mixin(Rule!("wurstsalat", FoodAndDrink.stuffedFlatbread));
-    mixin(Rule!("wurstplatte", FoodAndDrink.forkAndKnifeWithPlate));
+    mixin(Rule!("platte", FoodAndDrink.forkAndKnifeWithPlate));
     mixin(Rule!("wurst", FoodAndDrink.hotDog));
     mixin(Rule!("salami", FoodAndDrink.hotDog));
     mixin(Rule!("braunschweiger", FoodAndDrink.hotDog));
@@ -184,7 +187,6 @@ string tag(string dish)
     mixin(Rule!("spiralen", Objects.dna));
     mixin(Rule!("hauerteller", FoodAndDrink.forkAndKnifeWithPlate));
     mixin(Rule!("jaus", FoodAndDrink.forkAndKnifeWithPlate));
-    mixin(Rule!("platte", FoodAndDrink.forkAndKnifeWithPlate));
     mixin(Rule!("liptauer", FoodAndDrink.forkAndKnife));
     mixin(Rule!("aufstrich", FoodAndDrink.forkAndKnife));
     mixin(Rule!("hummus", FoodAndDrink.forkAndKnife));

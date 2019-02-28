@@ -98,9 +98,11 @@ immutable typos = [
     ["  ", " "],
     [" - ", "-"],
     ["- ", "-"],
+    [" -", "-"],
     ["Nuß", "Nuss"],
     ["crems", "cremes"],
     ["Wachauerlaibchen", "Wachauer Laberl"],
+    ["Chilli", "Chili"],
 ];
 
 immutable betterReadable = [
@@ -112,6 +114,7 @@ immutable betterReadable = [
     ["kuchen", "-Kuchen"],
     ["sauce", "soß"],
     ["Geselchtes", "Xöchz"],
-    ["Sc. Tartare", "Sauce tartare"]
+    ["Sc. Tartare", "Sauce tartare"],
+    ["Risi-Bisi", "Risibisi"],
     //["salat", "-Salat"],
 ];
