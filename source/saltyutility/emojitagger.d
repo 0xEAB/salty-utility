@@ -71,6 +71,7 @@ string tag(string dish)
     mixin(Rule!("geschnetzeltes", FoodAndDrink.curryRice));
     mixin(Rule!("fleisch", FoodAndDrink.cutOfMeat));
     mixin(Rule!("kotelett", FoodAndDrink.cutOfMeat));
+    mixin(Rule!("surbraten", FoodAndDrink.cutOfMeat));
     mixin(Rule!("cevapcici", FoodAndDrink.hotDog));
     mixin(Rule!("schinken", FoodAndDrink.bacon));
     mixin(Rule!("xöchz", FoodAndDrink.bacon));
@@ -196,6 +197,7 @@ string tag(string dish)
     mixin(Rule!("kakao", TravelAndPlaces.fog));
     mixin(Rule!("mohn", TravelAndPlaces.fog));
     mixin(Rule!("topfen", FoodAndDrink.glassOfMilk));
+    mixin(Rule!("heringschmaus", Smileys.faceVomiting));
     mixin(Rule!("griechisch", Flags.flagGreece));
     mixin(Rule!("französisch", Flags.flagFrance));
     mixin(Rule!("salat", FoodAndDrink.greenSalad));
