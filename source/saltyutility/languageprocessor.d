@@ -105,6 +105,7 @@ immutable typos = [
     ["Wachauerlaibchen", "Wachauer Laberl"],
     ["Chilli", "Chili"],
     ["Sc.Tartare", "Sc. Tartare"],
+    ["ürree", "üree"], // Püree
 ];
 
 immutable betterReadable = [

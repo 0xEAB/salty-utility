@@ -175,6 +175,7 @@ string tag(string dish)
     mixin(Rule!("frankfurter", FoodAndDrink.hotDog));
     mixin(Rule!("käsekrainer", FoodAndDrink.hotDog));
     mixin(Rule!("würst", FoodAndDrink.hotDog));
+    mixin(Rule!("hot dog", FoodAndDrink.hotDog));
     mixin(Rule!("schweiz", Flags.flagSwitzerland));
     mixin(Rule!("wurstsalat", FoodAndDrink.stuffedFlatbread));
     mixin(Rule!("platte", FoodAndDrink.forkAndKnifeWithPlate));
@@ -207,6 +208,7 @@ string tag(string dish)
     mixin(Rule!("französisch", Flags.flagFrance));
     mixin(Rule!("salat", FoodAndDrink.greenSalad));
     mixin(Rule!("nockerl", FoodAndDrink.dumpling));
+    mixin(Rule!("biskuit", FoodAndDrink.cookie));
     mixin(Rule!("kuchen", FoodAndDrink.pie));
     mixin(Rule!("schoko", FoodAndDrink.chocolateBar));
     mixin(Rule!("schnitten", FoodAndDrink.chocolateBar));
