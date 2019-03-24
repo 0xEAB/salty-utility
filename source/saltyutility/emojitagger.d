@@ -91,6 +91,7 @@ string tag(string dish)
     mixin(Rule!("kroketten", TravelAndPlaces.rocket));
     mixin(Rule!("erdäpfel", FoodAndDrink.potato));
     mixin(Rule!("knödel", FoodAndDrink.dumpling));
+    mixin(Rule!("rösti", FoodAndDrink.potato));
     mixin(Rule!("buchtel", FoodAndDrink.dumpling));
     mixin(Rule!("krapfen", FoodAndDrink.bagel));
     mixin(Rule!("butter", FoodAndDrink.glassOfMilk));
