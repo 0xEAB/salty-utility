@@ -106,6 +106,7 @@ immutable typos = [
     ["Chilli", "Chili"],
     ["Sc.Tartare", "Sc. Tartare"],
     ["Sc Tartare", "Sc. Tartare"],
+    ["Risi Bisi", "Risibisi"],
     ["ürree", "üree"], // Püree
 ];
 

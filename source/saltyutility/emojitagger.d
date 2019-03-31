@@ -38,6 +38,7 @@ string tag(string dish)
     mixin(Rule!("stangerl", FoodAndDrink.baguetteBread));
     mixin(Rule!("burger", FoodAndDrink.hamburger));
     mixin(Rule!("spaghetti", FoodAndDrink.spaghetti));
+    mixin(Rule!("bolognese", FoodAndDrink.spaghetti));
     mixin(Rule!("pasta", FoodAndDrink.spaghetti));
     mixin(Rule!("lasagne", FoodAndDrink.spaghetti));
     mixin(Rule!("chili", FoodAndDrink.hotPepper));
@@ -193,6 +194,7 @@ string tag(string dish)
     mixin(Rule!("hörnchen", AnimalsAndNature.chipmunk));
     mixin(Rule!("spätzle", FoodAndDrink.steamingBowl));
     mixin(Rule!("spiralen", Objects.dna));
+    mixin(Rule!("makkaroni", FoodAndDrink.steamingBowl));
     mixin(Rule!("hauerteller", FoodAndDrink.forkAndKnifeWithPlate));
     mixin(Rule!("jaus", FoodAndDrink.forkAndKnifeWithPlate));
     mixin(Rule!("liptauer", FoodAndDrink.forkAndKnife));
