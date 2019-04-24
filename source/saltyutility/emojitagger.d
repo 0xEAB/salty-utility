@@ -50,6 +50,7 @@ string tag(string dish)
     mixin(Rule!("pangasius", AnimalsAndNature.fish));
     mixin(Rule!("dorsch", AnimalsAndNature.fish));
     mixin(Rule!("hoki", AnimalsAndNature.fish));
+    mixin(Rule!("kabeljau", AnimalsAndNature.fish));
     mixin(Rule!("chinesisch", Symbols.japanesePassingGradeButton));
     mixin(Rule!("pizza", FoodAndDrink.pizza));
     mixin(Rule!("pommes", FoodAndDrink.frenchFries));
@@ -127,6 +128,7 @@ string tag(string dish)
     mixin(Rule!("banane", FoodAndDrink.banana));
     mixin(Rule!("ananas", FoodAndDrink.pineapple));
     mixin(Rule!("kiwi", FoodAndDrink.kiwiFruit));
+    mixin(Rule!("melone", FoodAndDrink.watermelon));
     mixin(Rule!("pudding", FoodAndDrink.custard));
     mixin(Rule!("polenta", FoodAndDrink.earOfCorn));
     mixin(Rule!("croissant", FoodAndDrink.croissant));
@@ -215,6 +217,7 @@ string tag(string dish)
     mixin(Rule!("nockerl", FoodAndDrink.dumpling));
     mixin(Rule!("biskuit", FoodAndDrink.cookie));
     mixin(Rule!("kuchen", FoodAndDrink.pie));
+    mixin(Rule!("nuss", FoodAndDrink.peanuts));    
     mixin(Rule!("doughnut", FoodAndDrink.doughnut));
     mixin(Rule!("donut", FoodAndDrink.doughnut));
     mixin(Rule!("schoko", FoodAndDrink.chocolateBar));
