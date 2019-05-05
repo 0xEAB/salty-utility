@@ -120,6 +120,7 @@ string tag(string dish)
     mixin(Rule!("zwetschke", FoodAndDrink.grapes));
     mixin(Rule!("kirsch", FoodAndDrink.cherries));
     mixin(Rule!("pfirsich", FoodAndDrink.peach));
+    mixin(Rule!("nektarine", FoodAndDrink.peach));
     mixin(Rule!("mandarine", FoodAndDrink.tangerine));
     mixin(Rule!("orange", FoodAndDrink.tangerine));
     mixin(Rule!("marille", FoodAndDrink.tangerine));
