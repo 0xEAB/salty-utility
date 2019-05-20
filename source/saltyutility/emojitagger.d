@@ -139,6 +139,7 @@ string tag(string dish)
     mixin(Rule!("zwiebel", FoodAndDrink.chestnut)); // Ev12
     //mixin(Rule!("knoblauch", FoodAndDrink.garlic)); // Ev12
     mixin(Rule!("zeller", FoodAndDrink.cucumber));
+    mixin(Rule!("spargel", FoodAndDrink.eggplant));
     mixin(Rule!("gemüse", FoodAndDrink.cucumber));
     mixin(Rule!("gnocchi", FoodAndDrink.dumpling));
     mixin(Rule!("joghurt", FoodAndDrink.glassOfMilk));
@@ -189,6 +190,7 @@ string tag(string dish)
     mixin(Rule!("wurst", FoodAndDrink.hotDog));
     mixin(Rule!("salami", FoodAndDrink.hotDog));
     mixin(Rule!("braunschweiger", FoodAndDrink.hotDog));
+    mixin(Rule!("abanossi", FoodAndDrink.hotDog)); // Cabanossi, Kabanossi
     mixin(Rule!("senf", AnimalsAndNature.sheafOfRice));
     mixin(Rule!("ketchup", FoodAndDrink.tomato));
     mixin(Rule!("kren", AnimalsAndNature.sheafOfRice));
@@ -227,6 +229,7 @@ string tag(string dish)
     mixin(Rule!("strudel", FoodAndDrink.burrito));
     mixin(Rule!("rahm", FoodAndDrink.glassOfMilk));
     mixin(Rule!("sauce tartare", Smileys.sweatDroplets));
+    mixin(Rule!("holland", Flags.flagNetherlands)); // Sauce Hollandaise
     mixin(Rule!("sugo", FoodAndDrink.cannedFood));
     mixin(Rule!("soß", Smileys.sweatDroplets));
     mixin(Rule!("eis", FoodAndDrink.softIceCream));
