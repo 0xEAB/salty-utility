@@ -168,12 +168,19 @@ template Case(string day)
 template Add(string lunchProperty, string supperProperty, string dishVariable)
 {
     // dfmt off
-    const char[] Add = `if (!` ~ dishVariable ~ `[1 .. $].startsWith("nthält:")) {
+    const char[] Add = `
+        immutable bool isContains = (
+            (` ~ dishVariable ~ `.length > 9)
+            && (` ~ dishVariable ~ `[1 .. 9].indexOf("hält:") >= 0)
+        );
+        immutable string dsh = (!isContains)
+            ? ` ~ dishVariable ~ `
+            : ", ";
         final switch (parserState) with (ParserState) {
-            case lunch: day.` ~ lunchProperty ~ ` ~= ` ~ dishVariable ~ `; break;
-            case supper: day.` ~ supperProperty ~ ` ~= ` ~ dishVariable ~ `; break;
+            case lunch: day.` ~ lunchProperty ~ ` ~= dsh; break;
+            case supper: day.` ~ supperProperty ~ ` ~= dsh; break;
             case init_: stderr.writeln("Warning: Possible dish appeared with no time-of-the-day specified: " ~ ` ~
                 dishVariable ~ `); break;
-        }}`;
+        }`;
     // dfmt on
 }
