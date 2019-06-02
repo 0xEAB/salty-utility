@@ -35,18 +35,24 @@ void print(Format f)(Week w, File output)
         import std.ascii : isDigit;
         import std.conv : to;
         import std.datetime : Date, dur;
-        import std.string : indexOf, stripRight;
+        import std.string : indexOf, strip;
 
-        immutable idxTo = w.title.indexOf(" bis ");
-        immutable idxStartDay = (idxTo - 6);
-        immutable idxStartMonth = (idxTo - 3);
-        immutable idxYear = (idxTo + 11);
+        immutable idx1 = w.title.indexOf('.');
+        immutable idxStartDay = (idx1 - 2);
+
+        immutable idx2 = w.title.indexOf('.', (idx1 + 1));
+        immutable idxStartMonth = (idx2 - 2);
+
+        immutable idx3 = w.title.indexOf('.', (idx2 + 1));
+        immutable idx4 = w.title.indexOf('.', (idx3 + 1));
+
+        immutable idxYear = (idx4 + w.title[idx4 .. $].countUntil!(c => c.isDigit));
 
         immutable year = w.title[idxYear .. (idxYear + 4)].to!int;
         immutable month = w.title[idxStartMonth .. (idxStartMonth + 2)].to!int;
         immutable day_ = w.title[idxStartDay .. (idxStartDay + 2)].to!int;
         Date date = Date(year, month, day_);
-        auto oneDay = dur!"days"(1);
+        immutable oneDay = dur!"days"(1);
     }
 
     foreach (Day day; w.days)
@@ -61,7 +67,7 @@ void print(Format f)(Week w, File output)
         static if (SQL)
         {
             output.writeln("INSERT INTO botcaster(announce, message) VALUES(");
-            ubyte uMonth = ubyte(date.month);
+            immutable uMonth = ubyte(date.month);
             output.write('\'', date.year, '-', uMonth, '-', date.day, " 09:10:00',\n'");
         }
 
