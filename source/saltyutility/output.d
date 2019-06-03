@@ -59,8 +59,8 @@ void print(Format f)(Week w, File output)
     {
         import emojid.animalsandnature : AnimalsAndNature;
 
-        auto lunch = day.lunch.reArrange.fixTypos.improveReadability;
-        auto lunchVeggie = day.lunchVeggie.reArrange.fixTypos.improveReadability;
+        auto lunch = day.lunch.reArrange.concatSoups.fixTypos.improveReadability;
+        auto lunchVeggie = day.lunchVeggie.reArrange.concatSoups.fixTypos.improveReadability;
         auto supper = day.supper.reArrange.fixTypos.improveReadability;
         auto supperVeggie = day.supperVeggie.reArrange.fixTypos.improveReadability;
 

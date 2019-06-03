@@ -9,7 +9,7 @@ module saltyutility.languageprocessor;
 import core.memory : GC;
 import std.algorithm : each, filter, map;
 import std.ascii : toUpper;
-import std.string : indexOf, join, replace, split, strip;
+import std.string : endsWith, indexOf, join, replace, split, strip;
 
 auto reArrange(string[] rawDishes)
 {
@@ -37,6 +37,32 @@ auto reArrange(string[] rawDishes)
 
     return list.map!strip
         .filter!(s => s.length > 0);
+}
+
+string[] concatSoups(Range)(Range dishes)
+{
+    string[] output;
+
+    bool soup = false;
+
+    foreach (dish; dishes)
+    {
+        if (dish == "Klare Suppe")
+        {
+            soup = true;
+        }
+        else if (soup)
+        {
+            output ~= dish ~ "-Suppe";
+            soup = false;
+        }
+        else
+        {
+            output ~= dish;
+        }
+    }
+
+    return output;
 }
 
 auto fixTypos(Range)(Range dishes)
