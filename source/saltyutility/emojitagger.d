@@ -65,6 +65,7 @@ string tag(string dish)
     mixin(Rule!("huhn", AnimalsAndNature.hatchingChick));
     mixin(Rule!("chicken", AnimalsAndNature.hatchingChick));
     mixin(Rule!("hendl", AnimalsAndNature.hatchingChick));
+    mixin(Rule!("henderl", AnimalsAndNature.hatchingChick));
     mixin(Rule!("rind", AnimalsAndNature.cow));
     mixin(Rule!("tafelspitz", AnimalsAndNature.cow));
     mixin(Rule!("schwein", AnimalsAndNature.pig));
