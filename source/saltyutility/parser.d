@@ -69,13 +69,18 @@ Week parse(Range)(Range text)
             {
                 if (line.startsWith("Mittag:"))
                 {
+                    parserState = ParserState.lunch;
+
                     // there should be at least 5 spaces between the columns
                     // also 5 spaces should be enough to strain off typos (e.g. "a n _ _ a p p l e")
                     immutable endOf1stCol = lineF16.indexOf("     "w);
+                    if (endOf1stCol < 0)
+                    {
+                        continue;
+                    }
 
                     offset2ndCol = endOf1stCol + lineF16[endOf1stCol .. $].countUntil!(
                             not!isWhite)();
-                    parserState = ParserState.lunch;
                 }
                 else
                 {
