@@ -140,6 +140,7 @@ immutable betterReadable = [
     ["dip", "-Dip"],
     ["gemüse", "-Gemüse"],
     ["em Salat", "er Salat"], // "grünem" -> "grüner", "buntem" -> "bunter"
+    ["Salaten", "Salate"], // "mit Salaten" -> "Salate"
     ["Kakaozucker", "Kakao-Zucker"],
     ["Kartoffel", "Erdäpfel"],
     ["kuchen", "-Kuchen"],
@@ -147,5 +148,6 @@ immutable betterReadable = [
     ["Geselchtes", "Xöchz"],
     ["Sc. Tartare", "Sauce tartare"],
     ["Risi-Bisi", "Risibisi"],
+    ["Blattalat", "Blattsalat"],
     //["salat", "-Salat"],
 ];
