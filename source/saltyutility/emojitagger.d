@@ -109,6 +109,7 @@ string tag(string dish)
     mixin(Rule!("gurke", FoodAndDrink.cucumber));
     mixin(Rule!("paradeis", FoodAndDrink.tomato));
     mixin(Rule!("paprika", FoodAndDrink.hotPepper));
+    mixin(Rule!("mais", FoodAndDrink.earOfCorn));
     mixin(Rule!("stern", TravelAndPlaces.glowingStar));
     mixin(Rule!("erbsen", FoodAndDrink.cucumber));
     mixin(Rule!("linsen", FoodAndDrink.cucumber));
@@ -196,6 +197,7 @@ string tag(string dish)
     mixin(Rule!("ketchup", FoodAndDrink.tomato));
     mixin(Rule!("kren", AnimalsAndNature.sheafOfRice));
     mixin(Rule!("käse", FoodAndDrink.cheeseWedge));
+    mixin(Rule!("grillfest", TravelAndPlaces.fire));
     mixin(Rule!("nudelsalat", FoodAndDrink.stuffedFlatbread));
     mixin(Rule!("nudel", FoodAndDrink.steamingBowl));
     mixin(Rule!("penne", FoodAndDrink.steamingBowl));
