@@ -173,8 +173,10 @@ string safeTag(string dish)
 
     if (tag is null)
     {
+        import emojid.symbols : Symbols;
+
         stderr.writeln(`Warning: No suitable tag for "` ~ dish ~ `"`);
-        return "";
+        return Symbols.whiteQuestionMark;
     }
 
     return tag;
