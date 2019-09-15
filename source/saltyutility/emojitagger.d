@@ -182,6 +182,7 @@ string tag(string dish)
     mixin(Rule!("bojar", FoodAndDrink.cheeseWedge));
     mixin(Rule!("feta", FoodAndDrink.cheeseWedge));
     mixin(Rule!("leberkäs", AnimalsAndNature.unicornFace));
+    mixin(Rule!("debreziner", FoodAndDrink.hotDog));
     mixin(Rule!("frankfurter", FoodAndDrink.hotDog));
     mixin(Rule!("käsekrainer", FoodAndDrink.hotDog));
     mixin(Rule!("würst", FoodAndDrink.hotDog));
