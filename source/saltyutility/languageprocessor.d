@@ -119,6 +119,7 @@ immutable separators = [
     " und ",
     " auf ",
     " im ",
+    " an ",
 ];
 
 immutable typos = [
