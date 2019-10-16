@@ -51,7 +51,9 @@ string tag(string dish)
     mixin(Rule!("dorsch", AnimalsAndNature.fish));
     mixin(Rule!("hoki", AnimalsAndNature.fish));
     mixin(Rule!("kabeljau", AnimalsAndNature.fish));
-    mixin(Rule!("chinesisch", Symbols.japanesePassingGradeButton));
+    mixin(Rule!("chinesisch", Flags.flagChina));
+    mixin(Rule!("china", Flags.flagChina));
+    mixin(Rule!("teigtasche", FoodAndDrink.dumpling));
     mixin(Rule!("pizza", FoodAndDrink.pizza));
     mixin(Rule!("pommes", FoodAndDrink.frenchFries));
     mixin(Rule!("knacker", FoodAndDrink.hotDog));
