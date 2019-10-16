@@ -224,10 +224,12 @@ string tag(string dish)
     mixin(Rule!("nockerl", FoodAndDrink.dumpling));
     mixin(Rule!("biskuit", FoodAndDrink.cookie));
     mixin(Rule!("kuchen", FoodAndDrink.pie));
-    mixin(Rule!("nuss", FoodAndDrink.peanuts));    
+    mixin(Rule!("nuss", FoodAndDrink.peanuts));
+    mixin(Rule!("hafertaler", FoodAndDrink.cookie));
     mixin(Rule!("doughnut", FoodAndDrink.doughnut));
     mixin(Rule!("donut", FoodAndDrink.doughnut));
     mixin(Rule!("schoko", FoodAndDrink.chocolateBar));
+    mixin(Rule!("keks", FoodAndDrink.cookie));
     mixin(Rule!("schnitten", FoodAndDrink.chocolateBar));
     mixin(Rule!("schnitte", FoodAndDrink.pie));
     mixin(Rule!("strudel", FoodAndDrink.burrito));
