@@ -91,11 +91,13 @@ string tag(string dish)
     mixin(Rule!("risibisi", FoodAndDrink.cookedRice));
     mixin(Rule!("eintopf", FoodAndDrink.shallowPanOfFood));
     mixin(Rule!("sandwich", FoodAndDrink.sandwich));
+    mixin(Rule!("käsekuchen", FoodAndDrink.shortcake));
+    mixin(Rule!("käsetorte", FoodAndDrink.shortcake)); // Erdäpfel-Käse-Torte
+    mixin(Rule!("erdäpfel", FoodAndDrink.potato));
     mixin(Rule!("schmarr", FoodAndDrink.pancakes));
     mixin(Rule!("fleckerl", FoodAndDrink.bentoBox));
     mixin(Rule!("frühlingsrolle", FoodAndDrink.burrito));
     mixin(Rule!("kroketten", TravelAndPlaces.rocket));
-    mixin(Rule!("erdäpfel", FoodAndDrink.potato));
     mixin(Rule!("knödel", FoodAndDrink.dumpling));
     mixin(Rule!("rösti", FoodAndDrink.potato));
     mixin(Rule!("buchtel", FoodAndDrink.dumpling));
