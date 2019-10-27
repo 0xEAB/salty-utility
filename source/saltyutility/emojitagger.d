@@ -36,6 +36,7 @@ string tag(string dish)
     mixin(Rule!("toast", FoodAndDrink.sandwich)); // "Schinken-Käse-Toast"
     mixin(Rule!("baguette", FoodAndDrink.baguetteBread)); // "Käse-Knoblauch-Baguette"
     mixin(Rule!("stangerl", FoodAndDrink.baguetteBread));
+    mixin(Rule!("augsburger", FoodAndDrink.hotDog));
     mixin(Rule!("burger", FoodAndDrink.hamburger));
     mixin(Rule!("spaghetti", FoodAndDrink.spaghetti));
     mixin(Rule!("bolognese", FoodAndDrink.spaghetti));
@@ -57,7 +58,6 @@ string tag(string dish)
     mixin(Rule!("pizza", FoodAndDrink.pizza));
     mixin(Rule!("pommes", FoodAndDrink.frenchFries));
     mixin(Rule!("knacker", FoodAndDrink.hotDog));
-    mixin(Rule!("augsburger", FoodAndDrink.hotDog));
     mixin(Rule!("risotto", FoodAndDrink.cookedRice));
     mixin(Rule!("couscous", FoodAndDrink.cookedRice));
     mixin(Rule!("hirsetaler", FoodAndDrink.riceCracker));
