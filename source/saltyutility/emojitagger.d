@@ -226,6 +226,7 @@ string tag(string dish)
     mixin(Rule!("französisch", Flags.flagFrance));
     mixin(Rule!("salat", FoodAndDrink.greenSalad));
     mixin(Rule!("nockerl", FoodAndDrink.dumpling));
+    mixin(Rule!("donauwelle", FoodAndDrink.pie));
     mixin(Rule!("biskuit", FoodAndDrink.cookie));
     mixin(Rule!("kuchen", FoodAndDrink.pie));
     mixin(Rule!("nuss", FoodAndDrink.peanuts));
