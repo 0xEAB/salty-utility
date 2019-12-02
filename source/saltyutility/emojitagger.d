@@ -246,6 +246,7 @@ string tag(string dish)
     mixin(Rule!("eis", FoodAndDrink.softIceCream));
     mixin(Rule!("dip", TravelAndPlaces.droplet));
     mixin(Rule!("curry", FoodAndDrink.curryRice));
+    mixin(Rule!("punsch", FoodAndDrink.hotBeverage));
     mixin(Rule!("cocktail", FoodAndDrink.cocktailGlass));
     mixin(Rule!("kalt", TravelAndPlaces.snowflake));
 
