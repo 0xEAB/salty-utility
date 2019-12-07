@@ -160,11 +160,12 @@ string tag(string dish)
     mixin(Rule!("öl", TravelAndPlaces.oilDrum));
 
     // supper
-    if (!d.contains("dreier"))
+    if (!d.contains("dreier") && !d.contains("feier"))
     {
         mixin(Rule!("eier", FoodAndDrink.egg));
     }
     mixin(Rule!("osterei", FoodAndDrink.egg));
+    mixin(Rule!("feier", Activities.partyPopper));
     mixin(Rule!("brot", FoodAndDrink.bread));
     mixin(Rule!("semmel", FoodAndDrink.bread));
     mixin(Rule!("semmerl", FoodAndDrink.bread));
