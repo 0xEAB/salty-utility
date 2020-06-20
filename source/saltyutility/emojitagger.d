@@ -50,6 +50,7 @@ string tag(string dish)
     mixin(Rule!("lachs", AnimalsAndNature.fish));
     mixin(Rule!("pangasius", AnimalsAndNature.fish));
     mixin(Rule!("dorsch", AnimalsAndNature.fish));
+    mixin(Rule!("scholle", AnimalsAndNature.fish));
     mixin(Rule!("hoki", AnimalsAndNature.fish));
     mixin(Rule!("kabeljau", AnimalsAndNature.fish));
     mixin(Rule!("chinesisch", Flags.flagChina));
